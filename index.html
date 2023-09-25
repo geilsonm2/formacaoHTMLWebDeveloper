@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diário de HTML</title>
+</head>
+<body>
+
+    <h1 id="inicio">Introdução ao <abbr title="HyperText Markup Language">HMTL</abbr> na Prática</h1>
+    
+    <hr>
+    <ol>
+        <strong><li><a href="#falandoSobreTags">Falando sobre Tags e seus atributos</a></li></strong>
+        <strong><li><a href="#textos">Textos</a></li></strong>
+        <strong><li><a href="#listasOrdenadasENaoOrdenadas">Listas Ordenadas e Não Ordenadas</a></li></strong>
+        <strong><li><a href="#links">Links</a></li></strong>
+    </ol>
+    <hr>
+
+    <h2 id="falandoSobreTags"><a href="#inicio">Falando sobre Tags e seus atributos</a></h2>
+
+    <p>Existem atributos globais para todas as tags e outros que são mais específicos para cada Tag.</p>
+
+    <h4><strong>Exemplo de tag global:</strong></h4>
+
+    <p><font size="3" color="Blue"><strong>Strong</strong></font></p>
+    <p>A tag <strong><mark><i><u>Strong</u></i></mark></strong> como exemplo pode ser atribuido a ela um id, uma class entre outro atributos. Com um id, o <strong>JavaScript</strong> consegue acessa-la com facilidade.<br>
+    Passando o atributo style, conseguimos alterar a aparencia daquela tag utilizando o <strong><abbr title="Cascading Style Sheets">CSS</abbr></strong>.</p>
+
+    <h4><strong>Exemplo de tag especificas:</strong></h4>
+    <ul>
+        <li>Input</li>
+        <li>Img</li>
+        <li>Hr</li>
+    </ul>
+    <h2 id="textos" title="Voltar para o início"><a href="#inicio">Textos</a></h2>
+    <h4><strong>Tags de Personalização</strong></h4>
+    <ul>
+        <li>Strong = Negrito</li>
+        <li>u = Sublinhar</li>
+        <li>Mark = Marcação estilo marca-texto</li>
+        <li>i = Itálico</li>
+        <li>sup = Dessa forma<sup>2</sup></li>
+    </ul>
+    <h3><strong>Tags de Exibição de Textos</strong></h3>
+    <ul>
+        <li>h1 = Títulos</li>
+        <li>h2 = Sub-Títulos</li>
+        <li>p = Paragrafo</li>
+        <li>blockquote = Citações</li>
+        <li>small = Textos menores, dessa forma: <small>small</small></li>
+    </ul>
+    <h2 id="listasOrdenadasENaoOrdenadas"><a href="#inicio">Listas Ordenadas e Não Ordenadas</a></h2>
+    <h4>Listas Ordenadas são ordenadas por números a cada item da lista.</h4>
+    <h3>Exemplo de Listas Ordenadas</h3>
+    <small><strong>Utilizamos ol e dentro do ol colocamos li <sub>list-item</sub></strong></small>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+    <h3>Exemplo de Listas Não Ordenadas</h3>
+    <small><strong>Utilizamos ul e dentro do ul também colocamos li <sub>list-item</sub></strong></small>
+    <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+    <h2 id="links"><a href="#inicio">Links</a></h2>
+    <h4>Utilizamos a tag "a" <sup><strong>(ancor)</strong></sup> para atribuir uma pagina aquele link</h4>
+    <h5>Exemplos de atributos da tag "a":</h5>
+    <ul>
+        <li>href = Para indicarmos a página que sera redirecionada</li>
+        <li>title = Para descrevermos onde seremos direcionados</li>
+        <li>target = Na tag target utilizamos _self para abrir a nova pagina na mesma pagina que estamos</li>
+        <li>target = Na tag target também podemos utilizar _blank para abri uma nova guia.</li>
+        <strong><blockquote><sub>Dentro do href também conseguimos passar um id, orientando para qual parte deve ser redirecionado dentro da mesma pagina!</sub></blockquote></strong>
+    </ul>
+</body>
+</html>
