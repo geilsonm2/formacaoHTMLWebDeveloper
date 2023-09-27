@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tags de Formulário</title>
+</head>
+<body>
+    <!-- Trabalhando com Tag Input e seus tipos -->
+    <h1 style="text-align: center;">Tag Input e Seus Tipos</h1>
+    <hr>
+    <form method="post">
+        <label for="">Text:</label> <input type="text"><br>                                         <!--Cria um campo de digitação-->
+        <label for="">Number:</label> <input type="number" min="0" max="99" step="5"><br>           <!--Cria um campo númerico, podendo ser limitado com max e min-->
+        <label for="">Range:</label> <input type="range" min="0" max="100"><br>                     <!--Cria uma barra de seleção de tamanho, podendo ser limitado com max e min-->
+        <label for="">Color:</label> <input type="color"><br>                                       <!--Cria um campo para escolha de cor-->
+        <label for="">E-mail:</label> <input type="email"><br>                                      <!--Cria um campo de e-mail, barrando um envio de e-mail incorreto-->
+        <label for="">URL:</label> <input type="url"><br>                                           <!--Cria um campo de URL, barrando envio de URL fora do padrão e sem a info do http/https-->
+        <label for="">Date:</label> <input type="date"><br>                                         <!--Cria um campo de data-->
+        <label for="">Week:</label> <input type="week"><br>                                         <!--Cria um campo de semana. Não funciona no mozila -->
+        <label for="">Month:</label> <input type="month"><br>                                       <!--Cria um campo de Mês.Não funciona no mozila -->
+        <label for="">Checkbox:</label> <input type="checkbox"><br>                                 <!--Checkbox, cria uma caixinha de validação-->
+        <label for="">Radio:</label> <input type="radio" name="aceita">  <input type="radio" name="aceita"><br> <!--Radio button, seleciona ou um ou outro quando ambos tem o mesmo nome. caso contrario podemos selecionar os dois-->                      
+        <label for="">Hidden:</label> <input type="hidden"> <br>                                    <!--Fica invisível para o usuário, porém é enviado para o servidor-->                      
+        <label for="">File:</label> <input type="file" multiple> <br>                               <!--Campo para enviar arquivo (com 'multiple', conseguimos trazer mais de 1 arquivo)-->                      
+        <label for="">Search:</label> <input type="search" multiple> <br>                           <!--Campo de busca com um "x" no final, para limpar o campo (Funciona apenas no Chrome)-->                      
+        <label for="">Button:</label> <input type="submit" value="Enviar"><br>                      <!--Botão-->
+    </form>
+    <hr>
+    <h1 style="text-align: center;">Checkbox e Radio</h1>
+    <hr>
+    <form method="post" >                                                                 <!--Colocando o name do input como opcional, quando selecionarmos os 4 checkbox ele pegará apenas o ultimo valor-->
+        <p>Quais opcionais você deseja ?</p>                                              <!--Colocando opcional[], com 'method=post' nosso código entende que é uma lista e há mais de um valor ou nao-->
+        <input type="checkbox" disabled name="opcional[]" value="queijo">+ queijo<br>     <!--Entendendo dessa forma $opcional["queijo,"cebola","azeitona"], podemos tambem colocar como desabled caso o campo esteja indisponivel -->
+        <input type="checkbox" name="opcional[]" value="calabresa">+ calabresa<br>        <!--Com method = get, conseguimos ver na URL o que sera encaminhado para o nosso backend-->
+        <input type="checkbox" name="opcional[]" value="cebola">+ cebola<br>              
+        <input type="checkbox" name="opcional[]" value="azeitona">+ azeitona<br>
+        <p>Borda Recheada?</p>
+        <input type="radio" name="borda" value="sim">Sim<br>
+        <input type="radio" name="borda" value="nao">Nao
+        <p>Bebida</p>
+        <input type="radio" name="bebida" value="suco"> Suco <br>
+        <input type="radio" name="bebida" value="refrigerante"> Refrigerante <br>
+        <input type="radio" name="bebida" value="agua"> Agua <br>
+        <input type="radio" name="bebida" value="nenhum"> Nenhum <br>
+        <br>
+        <button type="submit">Enviar</button>
+    </form>
+    <br>
+    <h1 style="text-align: center;">Button e Seus Tipos</h1>
+    <form method="get">
+        <label>Nome: </label><input type="text" name="name"><br>
+        <label>Idade: </label><input type="number" name="age"><br>
+        <label>Password: </label><input type="password" name="password"><br>
+
+        <button type="button" onclick="alert('Cliquei aqui')">Clicável</button> <!--on = evento - onclick/onmouseover = "codigoJavaScript" dará uma função com JavaScript quando clicar/passar no botão--> 
+        <br><button type="reset">reset</button> <br><!--Vai limpar os dados do Formulário-->
+        <button type="submit">submit</button> <!--Enviar o arquivo para o backend, e precisamos do evento no form de onsubmit, para validar o formulário antes de enviar.-->
+    </form>
+    <h1 style="text-align: center;">Select e Seus Tipos</h1>
+    <form method="post">
+        <label>Nome:</label><input type="text" name=""> <br>
+        <label>Cargo:</label>
+        <select name="role"> <!--Para deixar valores pré definidos -->
+            <option value="">Selecione o Cargo</option><br>
+            <option value="gerente">Gerente</option><br>
+            <option value="diretor">Diretor</option><br>
+            <option value="presidente" selected>Presidente</option> <!--Podemos incluir um selected para deixar como pré-selecionado, e multiple para selecionar mais de uma opção-->
+        </select><br>
+        <label>Assunto:</label><input type="text" name=""><br>
+        <input type="submit" >Enviar
+
+    </form>
+    <h1 style="text-align: center;">TextArea</h1>
+    <label>Mensagem:</label><br>
+    <textarea name="message" id="" cols="30" rows="10"></textarea>
+</body>
+</html>

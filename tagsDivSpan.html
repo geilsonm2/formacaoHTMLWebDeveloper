@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div e Span</title>
+    <style>
+        span{
+            color:red; /*Todos os span ficaram vermelhos*/
+            font-weight: bold; /*Todos os span ficaram em negrito*/
+        }
+
+        .row {
+            margin: 5px;
+        }
+
+        label {
+            width: 100px;
+            text-align: right;
+            display: inline-block;
+            padding-right: 5px;
+        }
+
+        fieldset {
+            margin: 15px 0;
+            border-radius: 10px;
+            border-color: aquamarine;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div-e-span">
+        <fieldset>
+            <legend>Div e Span</legend>
+            <div id="links">
+                <h1 style="text-align: center;" >Div e Span</h1>
+                <p>A div é do tipo display-block: É uma tag do tipo que ocupa horizontal inteira de onde ela é inserida.</p>
+
+                <p>Tag Span: Auxilia caso voc queira inserir um <span>CSS</span> em algum componente específico, mantendo o código mais organizado. Sem ser display-block como a div</p>
+            </div>
+        </fieldset>
+    </div>
+
+    <div>
+        <fieldset id="name">
+        <legend>Fieldset </legend>
+        <h1 style="text-align: center;">Tag Fieldset</h1>
+        <p>Ela trabalha em conjuntos com outra tag, mais estrutural tendo uma aparencia específica e pode auxiliar em criar uma página em HTML pura.</p><br>
+        <p>Voc utiliza ele para segmentar o seu formulário, como por exemplo a caixinha que esta com a legenda Fieldset.</p><br>
+        <p>Seguimentando o formulário abaixo:</p>
+        <fieldset>    
+            <form method="post">
+                <label>Nome: </label><input type="text" name="" id="">
+                <label>Profissão: </label><input type="text" name="" id="">
+                <label>Endereço: </label><input type="text" name="" id="">
+                <label>Bairro: </label><input type="text" name="" id="">
+        </fieldset>
+        <br>
+        <fieldset>    
+                <label>Cidade/UF: </label><input type="text" name="" id="">
+                <label>Celular: </label><input type="text" name="" id="">
+                <label>Linkedin: </label><input type="text" name="" id="">
+            </form>
+        </fieldset> 
+        <button type="submit">Enviar</button>
+        </fieldset>
+    </div>
+</body>
+</html>
