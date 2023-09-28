@@ -6,7 +6,79 @@
     <title>Trabalhando com Mídias utilizando HTML</title>
 </head>
 <body>
-    <img src="image.png" > <!--Na tag img, passamos no src o caminho ou link da imagem/gif e podemos passar a altura e largura dele-->
-    
+    <div>
+        <h3>Tag IMG</h3>
+        <img src="image.png" width="200"> <!--Na tag img, passamos no src o caminho ou link da imagem/gif e podemos passar a altura e largura dele-->
+        <hr>
+    </div>
+
+    <div>
+        <h3>Tag Audio</h3>
+
+        <audio autoplay src="musica.mp3" controls>"Navegador não tem suporte para o áudio informado."</audio>
+
+        <p>Na Tag <b><i>audio</i></b> passamos alguns atributos <b><i>(que não são obrigatórios)</i></b> , como <b>Controls</b> para habilitar um controlador de play, velocidade, etc.  </p>
+
+        <p>E também podemos colocar o <b>AutoPlay</b>, onde o áudio ja inicia ao carregar a página no navegador. </p>
+
+        <p>A Tag <b><i>audio</i></b> tem seu peso semântico, pelo fato de quando o navegador ler o arquivo HTML e encontrar esta tag ele ja compreende que é um áudio.</p>
+
+        <p>E passamos abaixo da tag, uma mensagem informando que o <b><i> "Navegador não tem suporte para o áudio informado."</i></b>.</p>
+    <hr>
+    </div>
+
+    <div>
+        <h3>Tag Video</h3>
+
+        <video src="video.mp4" src="video.webM" controls>"Navegador não tem suporte para o video informado."</video>
+        
+        <p>A tag Video, utiliza os recursos nátivos do Navegador, ou seja como ele vai interpretar.</p>
+        <p>Passando mais de um video dentro da tag, criamos uma lista que caso o primeiro não tenha suporte, será exibido o segundo e caso não vá representa a frase sobre a falta de suporte, essa opção pode atrapalhar na otimização da sua página.</p>
+        <p>A tag Video, funciona da mesma forma que o audio, onde passamos o Controls e Autoplay opcionalmente. Sendo importante também passar a mensagem caso o navegador não suporte o video.</p>   
+        <hr>
+
+    </div>
+
+    <div>
+        <h3>Tag Track</h3>
+        <p>A tag Track é auxiliar da tag Video, ela fica dentro da tag video. Track são legendas onde conseguimos definir chapters (capitulos), explicando de parte em parte o vídeo inserido na página.
+        <br>
+        <br>
+        Existem alguns programas que geram arquivos do tipo VTT, onde voc consegue inserir o momento de inicio e fim de determinada legenda, entre outros. </p>
+
+        <video src="video.mp4" controls>
+            <track default src="legenda.vtt" kind="captions" srclang="en" > 
+        </video>
+        <p>O atributo Kind tem 5 opções, sendo elas:
+            <ul>
+                <li>Captions</li>
+                <li>Chapters</li>
+                <li>Descriptions</li>
+                <li>Metadata</li>
+                <li>Subtitles</li>
+            </ul>
+        </p>
+        <span>
+            <p>Explicando os mais interessantes, entre eles temos a opção Descriptions, ele é interessante para acessibilidade, por exemplo, temos um vídeo onde apresenta apenas uma paisagem sem nenhuma fala ou texto, então o Descriptions irá descrever a imagem apresentada.</p>
+            <p>Captions e Subtitles são basicamente a mesma coisa Subtitles vai apresentar basicamente um contexto da cena que esta aparecendo, ja o Caption é a legenda literal da boca da pessoa.</p>
+            <p>O  Chapters ele pica o video em pedaços e explica no min x falara sobre tal assunto, no min y sera apresentado outro assunto.</p>
+            <p>E o Srclang, onde passamos o idioma da legenda, podendo colocar no inicio da tag <b><i>default</i></b> orientando qual será a legenda padrão.</p>
+        </span>
+        <hr>
+    </div>
+   
+    <div>
+        <h3>Tag iFrame</h3>
+
+        <p><i>O iFrame é uma evolução do Embed, onde ele traz páginas externas em nosso código</i></p>
+
+        <div>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/wQuqHurKG2M?si=MGqHEo4aRncxs66r" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <br>
+        <p>O iFrame ele cria um #document quando vamos inspecionar nossa página, ou seja o iFrame é outro contexto, outro arquivo.</p>
+        <br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3655.6645942402056!2d-46.725007523723676!3d-23.6163589636169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce56ccc9dd4073%3A0xdb057267dc200858!2sR.%20Iratinga%2C%20518%20-%20Vila%20Andrade%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2005665-000!5e0!3m2!1spt-PT!2sbr!4v1695911523300!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </div>
 </body>
 </html>
